@@ -242,15 +242,20 @@ Exit our poor, suffering pwncat shell and...
 
 ---
 
+#  Run nmap again and get the lay of the land
+
 <img width="949" height="385" alt="minos-lxd" src="https://github.com/user-attachments/assets/c2aac07a-f108-4a2a-baca-49633940738a" />
 
 <img width="855" height="970" alt="full-scan" src="https://github.com/user-attachments/assets/8a594e51-6245-44b1-a5e2-193e6bd92b69" />
 
 
-ip-10-71-235-1.ec2.internal (10.71.235.1)
-Labyrinth.minos-lxd			(10.71.235.159)
-Athens.lxd 					(10.71.235.37)
-Minos.lxd 					(10.71.235.7)
+>ip-10-71-235-1.ec2.internal (10.71.235.1)
+>
+>Labyrinth.minos-lxd			(10.71.235.159)
+>
+>Athens.lxd 					(10.71.235.37)
+>
+>Minos.lxd 					(10.71.235.7)
 
 ---
 
