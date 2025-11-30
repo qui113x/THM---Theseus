@@ -146,22 +146,22 @@ cm0gL3RtcC9mO21rZmlmbyAvdG1wL2Y7Y2F0IC90bXAvZnxzaCAtaSAyPiYxfG5jIDE5Mi4xNjguMTQ2
 
 #  Some interesting binaries we might need:
 
-/usr/bin/base64                                                                              
-/usr/bin/curl
-/usr/bin/g++
-/usr/bin/gcc
-/usr/bin/lxc
-/usr/bin/make
-/bin/nc
-/usr/bin/ncat
-/bin/netcat
-/usr/bin/nmap
-/usr/bin/perl
-/bin/ping
-/usr/bin/python
-/usr/bin/python2
-/usr/bin/python2.7
-/usr/bin/python3
+>/usr/bin/base64                                                                              
+>/usr/bin/curl
+>/usr/bin/g++
+>/usr/bin/gcc
+>/usr/bin/lxc
+>/usr/bin/make
+>/bin/nc
+>/usr/bin/ncat
+>/bin/netcat
+>/usr/bin/nmap
+>/usr/bin/perl
+>/bin/ping
+>/usr/bin/python
+>/usr/bin/python2
+>/usr/bin/python2.7
+>/usr/bin/python3
 
 
 ---
