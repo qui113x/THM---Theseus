@@ -395,7 +395,9 @@ ssh Shore@10.71.235.37
 password: 		KingAegeus
 
 
-#  OK, after about a hundred freakin' tries, I finally just randomly tried using a lowercase 's'  for 'Shore' (which is what it says in the bloody pic) and I got IN!!!!
+#  OK, after about a hundred freakin' tries, I finally just randomly tried using a lowercase 's'  for 'Shore' (even though the bloody pic uses a capital 'S') and... 
+
+##  WE ARE IN!!!!
 
 
 So, use   ssh shore@10.71.235.37
