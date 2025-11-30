@@ -216,7 +216,7 @@ That'll work, run the following
 
 ---
 
-Weird, my pwncat shell gets messed up when I got root!? 
+Weird, my pwncat shell got messed up when I obtained root!? 
 
 <img width="942" height="324" alt="netstat" src="https://github.com/user-attachments/assets/790e545f-2fa5-4a69-a4c5-6bc4688ad975" />
 
