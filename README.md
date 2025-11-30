@@ -344,26 +344,28 @@ THM{6154ea526254375613650183962bf431}
 Find the offset to the jpeg marker:
 
 
-```grep -oba $'\xFF\xDB' ariadne | head 
-
-20:�� 
-89:��```
+>grep -oba $'\xFF\xDB' ariadne | head 
+>
+>20:�� 
+>89:��```
 
 
 Which means:
 
-```Offset 20: FF DB
-Offset 89: FF DB```
+>Offset 20: FF DB
+>
+>Offset 89: FF DB
 
 
 #  So, we need to extract everything (meaning the jpeg body) strarting from offset 20 and make a .bin file. Then, create a .bin header file. And then, combine the two files. 
 
 
-```dd if=ariadne of=jpeg_body.bin bs=1 skip=20
-
-29700+0 records in 
-29700+0 records out 
-29700 bytes (30 kB, 29 KiB) copied, 0.0637139 s, 466 kB/s```
+>dd if=ariadne of=jpeg_body.bin bs=1 skip=20
+>
+>29700+0 records in 
+>29700+0 records out
+>
+>29700 bytes (30 kB, 29 KiB) copied, 0.0637139 s, 466 kB/s
 
 
 ```printf "\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00" > jpeg_header.bin```
