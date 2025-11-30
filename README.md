@@ -20,9 +20,9 @@ Strip the dots and we get:
 
 TGUE?OSKMTUEGISYENFETOISROTSFOYTOTKUMHIAENMK
 
-Looks like a Scytale cipher. We need a key (it should be at the fifth position based on the question mark, right? Not necessarily):
+Looks like a Scytale cipher. We need a key (it should be at the fifth position based on the question mark, right?)
 
-Use Aurjun to discover any usable parameters:
+Ah, I see. This isn't actually a cipher we need to crack. It just hints at a 'key'. If we use Arjun we see why:
 
 <img width="571" height="249" alt="arjun" src="https://github.com/user-attachments/assets/6cc5f9cb-27ce-4209-acc0-93843bb4d032" />
 
