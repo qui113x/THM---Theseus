@@ -119,8 +119,9 @@ THM{499a89a2a064426921732e7d31bc08a}
 #  AHA!  Nice. New user and pass
 
 
-username: 		entrance
-password:  		Knossos
+>username: 		entrance
+>
+>password:  		Knossos
 
 
 ---
