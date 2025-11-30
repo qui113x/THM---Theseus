@@ -95,19 +95,30 @@ THM{499a89a2a064426921732e7d31bc08a}
 >Server: Werkzeug/1.0.1 Python/2.7.17
 >Date: Sat, 29 Nov 2025 02:58:09 GMT
 >
->total 16
 >drwxr-xr-x 6 minos minos   13 Aug 20  2020 .
+>
 >drwxr-xr-x 3 minos minos    3 Aug  3  2020 ..
+>
 >drwxr-xr-x 5 minos minos    6 Aug  3  2020 .Website
+>
 >lrwxrwxrwx 1 minos minos    9 Aug  3  2020 .bash_history -&gt; /dev/null
+>
 >-rw-r--r-- 1 minos minos  220 Aug  3  2020 .bash_logout
+>
 >-rw-r--r-- 1 minos minos 3771 Aug  3  2020 .bashrc
+>
 >drwx------ 2 minos minos    3 Aug  3  2020 .cache
+>
 >drwx------ 3 minos minos    3 Aug  3  2020 .gnupg
+>
 >-rw-r--r-- 1 minos minos  807 Aug  3  2020 .profile
+>
 >drwx------ 2 minos minos    3 Aug  4  2020 .ssh
+>
 >-rw------- 1 minos minos 7005 Aug 20  2020 .viminfo
+>
 >-rw-r--r-- 1 minos minos  960 Aug 20  2020 Crete_Shores
+>
 >-rw-r--r-- 1 minos minos   37 Aug  3  2020 Minos_Flag
 
 
@@ -379,14 +390,15 @@ Which means:
 
 ##  Now, just open the file:  xdg-open final.jpg
 
-![ariadne](https://github.com/user-attachments/assets/75a28caf-c574-4532-8444-566fd8ab9dc4)
+<img width="549" height="553" alt="ariadne-jpg" src="https://github.com/user-attachments/assets/3c56f5ec-f556-437a-977e-f15106ad8ea0" />
 
 
 Is that  a user and password?
 
 
-username: 		Shore
-password: 		KingAegeus
+>username: 		Shore
+>
+>password: 		KingAegeus
 
 ---
 
