@@ -346,8 +346,9 @@ Find the offset to the jpeg marker:
 
 >grep -oba $'\xFF\xDB' ariadne | head 
 >
->20:�� 
->89:��```
+>20:��
+> 
+>89:��
 
 
 Which means:
