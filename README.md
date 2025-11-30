@@ -182,13 +182,14 @@ cm0gL3RtcC9mO21rZmlmbyAvdG1wL2Y7Y2F0IC90bXAvZnxzaCAtaSAyPiYxfG5jIDE5Mi4xNjguMTQ2
 ---
 
 
-(remote) minos@Minos:/tmp$ sudo -l
-Matching Defaults entries for minos on Minos:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
-
-User minos may run the following commands on Minos:
-    (root) NOPASSWD: /usr/bin/nmap
+>(remote) minos@Minos:/tmp$ sudo -l
+>
+>Matching Defaults entries for minos on Minos:
+>    env_reset, mail_badpass,
+>    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+>
+>User minos may run the following commands on Minos:
+>    (root) NOPASSWD: /usr/bin/nmap
 
 <img width="937" height="757" alt="gtfobins" src="https://github.com/user-attachments/assets/3828ce83-a87f-4d6a-88fb-63e3985eb67e" />
 
